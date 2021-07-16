@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace senai_lovePets_webApi.Interfaces
 {
-    interface ISituacaoRepository
+    interface IPetRepository
     {
-        List<Situacao> Listar();
-        Situacao BuscarPorId(int id);
-
-        void Cadastrar(Situacao novaSituacao);
-
-        void Atualizar(int id, Situacao SituacaoAtualizada);
-
+        List<Pet> Listar();
+        Pet BuscarPorId(int id);
+        void Cadastrar(Pet novoPet);
+        void Atualizar(int id, Pet tipoPetAtualizado);
         void Deletar(int id);
-
     }
 }

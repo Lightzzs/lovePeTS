@@ -7540,11 +7540,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\46295618898\\Desktop\\2021-1S-2D\\reforco\\tarde\\lovePets\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj",
+      "projectUniqueName": "C:\\Users\\46295618898\\Desktop\\lovePets\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj",
       "projectName": "senai_lovePets_webApi",
-      "projectPath": "C:\\Users\\46295618898\\Desktop\\2021-1S-2D\\reforco\\tarde\\lovePets\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj",
+      "projectPath": "C:\\Users\\46295618898\\Desktop\\lovePets\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\senai_lovePets_webApi.csproj",
       "packagesPath": "C:\\Users\\46295618898\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\46295618898\\Desktop\\2021-1S-2D\\reforco\\tarde\\lovePets\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\obj\\",
+      "outputPath": "C:\\Users\\46295618898\\Desktop\\lovePets\\sprint-2-back-end\\senai_lovePets_webApi\\senai_lovePets_webApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
