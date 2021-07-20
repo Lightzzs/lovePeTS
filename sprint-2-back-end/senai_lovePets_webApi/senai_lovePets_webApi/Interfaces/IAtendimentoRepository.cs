@@ -47,11 +47,6 @@ namespace senai_lovePets_webApi.Interfaces
         /// <returns>Uma lista de atendimentos</returns>
         List<Atendimento> ListarMeus(int idUsuario);
 
-        /// <summary>
-        /// Altera o status de um atendimento
-        /// </summary>
-        /// <param name="idAtendimento">ID do atendimento que será alterado</param>
-        /// <param name="idNovaSituacao">ID da nova situação</param>
         void AlterarStatus(int idAtendimento, int idNovaSituacao);
     }
 }

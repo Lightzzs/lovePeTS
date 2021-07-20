@@ -48,7 +48,7 @@ namespace senai_lovePets_webApi.Repositories
 
         public List<Pet> Listar()
         {
-            return ctx.Pets.Include(p => p.IdPet).ToList();
+            return ctx.Pets.ToList();
         }
     }
 }

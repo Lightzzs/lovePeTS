@@ -19,5 +19,7 @@ namespace senai_lovePets_webApi.Interfaces
             void Deletar(int id);
 
             Usuario Login(string email, string senha);
-        }
+
+            Usuario BuscarPorEmailSenha(string email, string senha);
+    }
 }

@@ -49,7 +49,7 @@ namespace senai_lovePets_webApi.Repositories
 
         public List<Dono> Listar()
         {
-            return ctx.Donos.Include(p => p.IdDono).ToList();
+            return ctx.Donos.ToList();
         }
     }
 }

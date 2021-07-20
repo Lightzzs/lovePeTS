@@ -1,4 +1,5 @@
-﻿using senai_lovePets_webApi.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using senai_lovePets_webApi.Context;
 using senai_lovePets_webApi.Domains;
 using senai_lovePets_webApi.Interfaces;
 using System;
@@ -101,6 +102,8 @@ namespace senai_lovePets_webApi.Repositories
         public void Deletar(int idAtendimento)
         {
             ctx.Atendimentos.Remove(BuscarPorId(idAtendimento));
+
+            ctx.SaveChanges();
         }
 
         /// <summary>
@@ -110,7 +113,12 @@ namespace senai_lovePets_webApi.Repositories
         /// <returns>Uma lista de atendimentos</returns>
         public List<Atendimento> ListarMeus(int idUsuario)
         {
-            throw new NotImplementedException();
+            return ctx.Atendimentos
+                .Include("IdVeterinarioNavigation")
+                .Include(a => a.IdPetNavigation)
+                .Include(a => a.IdSituacaoNavigation)
+                .Where(a => a.IdVeterinarioNavigation.IdUsuario == idUsuario || a.IdPetNavigation.IdUsuario == idUsuario)
+                .ToList();
         }
 
         /// <summary>

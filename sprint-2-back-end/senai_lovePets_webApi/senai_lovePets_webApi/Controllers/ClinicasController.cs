@@ -15,7 +15,7 @@ namespace senai_lovePets_webApi.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    [Authorize(Roles = "1")]
+    //[Authorize(Roles = "1")]
     public class ClinicasController : ControllerBase
     {
 
@@ -52,6 +52,7 @@ namespace senai_lovePets_webApi.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(Clinica novaClinica)
         {
