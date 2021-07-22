@@ -39,6 +39,13 @@
             <param name="idAtendimento">ID do atendimento que será deletado</param>
             <returns>Um status code 204 - No Content</returns>
         </member>
+        <member name="M:senai_lovePets_webApi.Controllers.AtendimentosController.AlterarStatus(senai_lovePets_webApi.Domains.Atendimento)">
+            <summary>
+            Altera o status de um atendimento
+            </summary>
+            <param name="atendimento">Objeto com o atendimento que será alterado e a nova situação</param>
+            <returns>Um status code 204 - No Content</returns>
+        </member>
         <member name="M:senai_lovePets_webApi.Interfaces.IAtendimentoRepository.ListarTodos">
             <summary>
             Lista todos os atendimentos
@@ -77,6 +84,13 @@
             </summary>
             <param name="idUsuario">ID do usuário que deseja visualizar seus atendimentos</param>
             <returns>Uma lista de atendimentos</returns>
+        </member>
+        <member name="M:senai_lovePets_webApi.Interfaces.IAtendimentoRepository.AlterarStatus(System.Int32,System.Int32)">
+            <summary>
+            Altera o status de um atendimento
+            </summary>
+            <param name="idAtendimento">ID do atendimento que será alterado</param>
+            <param name="idNovaSituacao">ID da nova situação</param>
         </member>
         <member name="F:senai_lovePets_webApi.Repositories.AtendimentoRepository.ctx">
             <summary>

@@ -14,7 +14,6 @@ namespace senai_lovePets_webApi.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    [Authorize(Roles = "1")]
     public class UsuariosController : ControllerBase
     {
         private UsuarioRepository _usuariosRepository { get; set; }

@@ -15,7 +15,6 @@ namespace senai_lovePets_webApi.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    //[Authorize(Roles = "1")]
     public class DonosController : ControllerBase
     {
 
@@ -26,6 +25,7 @@ namespace senai_lovePets_webApi.Controllers
             _donosRepository = new DonoRepository();
         }
 
+        [Authorize(Roles = "1")]
         [HttpGet]
         public IActionResult Get()
         {

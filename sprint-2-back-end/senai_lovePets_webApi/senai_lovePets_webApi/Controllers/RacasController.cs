@@ -14,8 +14,6 @@ namespace senai_lovePets_webApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-
-    [Authorize(Roles = "1")]
     public class RacasController : ControllerBase
     {
 
@@ -52,7 +50,6 @@ namespace senai_lovePets_webApi.Controllers
             }
         }
 
-        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(Raca novaRaca)
         {

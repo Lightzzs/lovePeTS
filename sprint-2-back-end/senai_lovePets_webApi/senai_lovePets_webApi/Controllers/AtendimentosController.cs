@@ -125,22 +125,11 @@ namespace senai_lovePets_webApi.Controllers
             }
         }
 
-        [Authorize(Roles = "2, 3")]
-        [HttpGet("meus")]
-        public IActionResult ListarMeus()
-        {
-            try
-            {
-                int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
-
-                return Ok(_atendimentoRepository.ListarMeus(idUsuario));
-            }
-            catch (Exception erro)
-            {
-                return BadRequest(erro);
-            }
-        }
-
+        /// <summary>
+        /// Altera o status de um atendimento
+        /// </summary>
+        /// <param name="atendimento">Objeto com o atendimento que será alterado e a nova situação</param>
+        /// <returns>Um status code 204 - No Content</returns>
         [Authorize(Roles = "1")]
         [HttpPatch]
         public IActionResult AlterarStatus(Atendimento atendimento)
@@ -150,6 +139,22 @@ namespace senai_lovePets_webApi.Controllers
                 _atendimentoRepository.AlterarStatus(atendimento.IdAtendimento, atendimento.IdSituacao);
 
                 return StatusCode(204);
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
+        }
+
+        [Authorize(Roles = "2, 3")]
+        [HttpGet("meus")]
+        public IActionResult ListarMeus()
+        {
+            try
+            {
+                int idUsuario = Convert.ToInt32(HttpContext.User.Claims.First(c => c.Type == JwtRegisteredClaimNames.Jti).Value);
+
+                return Ok(_atendimentoRepository.ListarMeus(idUsuario));
             }
             catch (Exception erro)
             {

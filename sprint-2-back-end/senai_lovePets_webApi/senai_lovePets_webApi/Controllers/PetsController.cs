@@ -15,7 +15,6 @@ namespace senai_lovePets_webApi.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    [Authorize(Roles = "1")]
     public class PetsController : ControllerBase
     {
 
@@ -26,6 +25,7 @@ namespace senai_lovePets_webApi.Controllers
             _petsRepository = new PetRepository();
         }
 
+        [Authorize(Roles ="1")]
         [HttpGet]
         public IActionResult Get()
         {
@@ -52,7 +52,6 @@ namespace senai_lovePets_webApi.Controllers
             }
         }
 
-        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(Pet novoPet)
         {

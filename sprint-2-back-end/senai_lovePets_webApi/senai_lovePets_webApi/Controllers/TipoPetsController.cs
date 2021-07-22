@@ -15,7 +15,6 @@ namespace senai_lovePets_webApi.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    [Authorize(Roles = "1")]
     public class TipoPetsController : ControllerBase
     {
         private ITipoPetRepository _tipoPetsRepository { get; set; }
@@ -51,7 +50,6 @@ namespace senai_lovePets_webApi.Controllers
             }
         }
 
-        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(TipoPet novoUsuario)
         {

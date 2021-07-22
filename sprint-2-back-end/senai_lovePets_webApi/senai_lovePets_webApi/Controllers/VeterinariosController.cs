@@ -15,7 +15,6 @@ namespace senai_lovePets_webApi.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    [Authorize(Roles = "1")]
     public class VeterinariosController : ControllerBase
     {
         private IVeterinarioRepository _veterinariosRepository { get; set; }
@@ -25,6 +24,7 @@ namespace senai_lovePets_webApi.Controllers
             _veterinariosRepository = new VeterinarioRepository();
         }
 
+        [Authorize(Roles = "1")]
         [HttpGet]
         public IActionResult Get()
         {

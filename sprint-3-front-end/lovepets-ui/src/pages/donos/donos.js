@@ -45,7 +45,6 @@ export default class Donos extends Component{
               <tr>
                 <th>#</th>
                 <th>Dono</th>
-                <th>Pets</th>
               </tr>
             </thead>
 
@@ -58,7 +57,6 @@ export default class Donos extends Component{
                     <tr key={dono.idDono}>
                       <td>{dono.idDono}</td>
                       <td>{dono.nomeDono}</td>
-                      <td>{dono.pets}</td>
                     </tr>
 
                   )
